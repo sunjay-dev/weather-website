@@ -45,7 +45,7 @@ export default async function HomePage({ searchParams }: Props) {
 
   return (
     <div className="p-6 min-h-screen relative overflow-hidden">
-      <Image src={bgImagePath} alt="Weather Background" fill priority className="object-cover object-left -z-10" />
+      <Image src={bgImagePath} alt="Weather Background" fill priority quality={90} className="object-cover object-left -z-10" />
 
       <div className="relative z-10">
         <Header />
