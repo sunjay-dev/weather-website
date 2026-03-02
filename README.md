@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather Web App 🌦️
 
-## Getting Started
+A lightning-fast, modern weather web application built with Next.js. It allows users to search for the weather of any city or detect their exact coordinates to fetch real-time weather data.
 
-First, run the development server:
+<img src="https://github.com/user-attachments/assets/17ddcabf-2f7a-4c52-9b04-c7c97126c117" width="300" height="auto">
+
+## Features
+
+- **Search by City** – Enter a city name to get live weather updates with strict regex validation.
+- **Detect Location** – Automatically fetch weather data for your current latitude/longitude via the Geolocation API.
+- **Recent Searches** – Automatically saves your successful searches locally for quick, one-click access.
+- **Responsive UI** – Built with Tailwind CSS for a modern, mobile-friendly experience.
+- **Weather Details** – Includes temperature, rain probability, humidity, hourly data, and a 3-day forecast.
+
+## Technologies Used
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Lucide React](https://img.shields.io/badge/Lucide_React-F28D1A?style=for-the-badge&logo=lucide&logoColor=white) ![React Hot Toast](https://img.shields.io/badge/React_Hot_Toast-FF4154?style=for-the-badge&logo=react&logoColor=white) ![RapidAPI](https://img.shields.io/badge/RapidAPI-005571?style=for-the-badge&logo=rapid&logoColor=white)
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/sunjay-dev/weather-website.git
+cd weather-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies (using pnpm):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up your **.env.local** file at the root of your project:
 
-## Learn More
+> **Note:** You can get your free API key directly from [RapidAPI / WeatherAPI.com](https://rapidapi.com/weatherapi/api/WeatherAPI.com).
 
-To learn more about Next.js, take a look at the following resources:
+```env
+RAPID_API_KEY=your_weatherapi_key_here
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Start the server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev
+```
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open-source and available under the **MIT License**.

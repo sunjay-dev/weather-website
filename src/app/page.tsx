@@ -2,10 +2,10 @@
 import { LocateFixed } from "lucide-react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-export default function SearchPage() {
+function SearchContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isLocating, setIsLocating] = useState(false);
@@ -113,5 +113,21 @@ export default function SearchPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function LoadingState() {
+  return (
+    <div id="splash-screen" className="flex-col bg-[#4d99e7] min-h-dvh flex items-center justify-center transition duration-1000 ease-out">
+      <Image src="/logo_white.webp" alt="WeatherX Logo" width={208} height={208} priority />
+    </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<LoadingState />}>
+      <SearchContent />
+    </Suspense>
   );
 }
